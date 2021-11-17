@@ -1,0 +1,71 @@
+{
+  "name": "figma-measure",
+  "version": "3.1.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "build": "webpack --mode=production && zip -r -X  \"Figma Measure.zip\" \"./Figma Measure/\"",
+    "dev": "DEBUG=* webpack --watch",
+    "version": "conventional-changelog -p karma -i CHANGELOG.md -s -r 0 && git add .",
+    "lint": "eslint 'src/*/**/*.{js,ts,tsx}' --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.36.0",
+    "@types/node": "^16.10.3",
+    "@types/react-router-dom": "^5.3.1",
+    "@types/styled-components": "^5.1.14",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "create-file-webpack": "^1.0.2",
+    "css-loader": "^6.3.0",
+    "esbuild-loader": "^2.15.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-react": "^7.26.1",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.3.0",
+    "styled-components": "^5.3.1",
+    "terser-webpack-plugin": "^5.2.4",
+    "typescript": "^4.4.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0"
+  },
+  "figmaPlugin": {
+    "name": "Figma Measure",
+    "id": "739918456607459153",
+    "api": "1.0.0",
+    "main": "code.js",
+    "ui": "ui.html",
+    "enableProposedApi": false,
+    "editorType": [
+      "figma"
+    ],
+    "relaunchButtons": [
+      {
+        "command": "open",
+        "name": "Open Figma-Measure"
+      },
+      {
+        "command": "visibility",
+        "name": "Show/Hide Measurements",
+        "multipleSelection": true
+      }
+    ]
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
+    "mobx-sync": "^3.0.0",
+    "preact": "^10.5.14",
+    "react-popper": "^2.2.5",
+    "react-router-dom": "^5.3.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
